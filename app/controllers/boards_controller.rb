@@ -15,6 +15,25 @@ class BoardsController < ApplicationController
     end
   end
 
+  def show
+    @board = Board.find(params[:id])
+  end
+
+  def edit
+    @board = Board.find(params[:id])
+  end
+
+  def update
+    @board = Board.find(params[:id])
+    @board.board_name = params[:board_form][:board_name]
+
+    if @board.save
+      redirect_to board_show_url, notice: "掲示板名を更新しました。"
+    else
+      render 'board/:id/edit'
+    end
+  end
+
   def destroy
     board = Board.find(params[:id])
     board.destroy

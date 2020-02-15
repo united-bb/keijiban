@@ -1,0 +1,24 @@
+<header>
+  <div class="header-item">
+    <h1>掲示BANG!</h1>
+    <ul>
+      <li><%= link_to 'ログアウト', login_path %></li>
+      <li><%= link_to '掲示板一覧', board_index_path %></li>
+    </ul>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="board_info">
+      <%= form_for :board_form do |form|%>
+        掲示板番号：<%= @board.id%><br>
+        掲示板名　：<%= form.text_field :board_name, size:60, maxlength:60 %><br>
+        作成日時　：<%= @board.created_at %><br>
+        <%= form.submit "変更する" %>
+      <% end %>
+      <%= link_to '掲示板詳細に戻る', board_show_path %>
+    </div>
+  </div>
+</main>
+<footer>
+</footer>
