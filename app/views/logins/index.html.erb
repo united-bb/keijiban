@@ -1,0 +1,28 @@
+<header>
+  <div class="header-item">
+    <h1>掲示BANG!</h1>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="login_main_box">
+      <div class="login_menu">
+        <h2>ログイン</h2>
+        <% if flash.alert %>
+          <p class="alert">
+            <%= flash.alert %>
+          </p>
+        <% end %>
+        <%= form_tag :session, id: "login_form" do %>
+          <label>ユーザー名:</label><br>
+          <input type="text" name="name" size="50"></br><br>
+          <label>パスワード:</label><br>
+          <input type="password", name="password" size="50"><br><br>
+          <input type="submit" value="ログイン"><br><br>
+          <%= link_to "新規ユーザ登録", login_new_path %>
+        <% end %>
+      </div>
+    </div> 
+  </div>
+</main>

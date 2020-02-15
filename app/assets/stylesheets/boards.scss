@@ -1,0 +1,128 @@
+// Place all the styles related to the index controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+header {
+  width: 1000px;
+  height: 150;
+  padding: 0;
+  background-color: #D5D5D5;
+  margin: 5px auto 0 auto;
+}
+
+header .header-item h1 {
+  width: 200px;
+  height: auto;
+  margin: 0;
+  padding: 10px 0 0 8px;
+  border-width: 1px;
+  border-color: #333333;
+  border-style: solid; 
+}
+
+header .header-item ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header .header-item a{
+  display: block;
+  padding: 5px;
+  color: #000000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+header .header-item a:hover{
+  background-color: #eeeeee;
+}
+
+header .header-item ul:after{
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header .header-item li{
+  float: right;
+  width: auto;
+}
+
+main {
+  width: 1000px;
+  height: auto;
+  padding: 0;
+  margin: 10px auto 0 auto;
+  background-color: #D5D5D5; 
+}
+
+main .container {
+  width: 1000px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+main .create_board_menu {
+  width: 800px;
+  height: 30px;
+  margin: 10px auto 0 auto;
+  padding: 0;
+  background-color: #FFFF99
+}
+
+main .create_board_menu a{
+  float: right;
+}
+
+main .create_board_menu form{
+  margin: 5px;
+  padding: 0;
+}
+
+main .create_board_menu .new_genre {
+  margin: 0 5px 0 0;
+  padding: 4px 0 0 0;
+  float: left;
+}
+
+main .create_board_menu .new_boardname{
+  margin: 2px 0 0 5px;
+  padding: 0;
+  float: left;
+}
+
+main .main-box {
+  margin: 10px, 0 0 0;
+  background-color: #D5D5D5;
+}
+
+table {
+  width: 800px;
+  height: auto;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  background-color: #AA66AA;
+}
+
+table th{
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+}
+
+table td {
+  border-width: 1px;
+  border-color: #000000;
+  border-style: solid;
+}
+
+
+main .create_comment_menu {
+  width: 800px;
+  height: 50px;
+  margin: 10px auto 0 auto;
+  padding: 0;
+  background-color: #FFFF99
+}

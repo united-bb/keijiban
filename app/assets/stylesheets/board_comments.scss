@@ -1,0 +1,23 @@
+// Place all the styles related to the board_comment controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+main .main-comment-box table {
+  width: 800px;
+  height: auto;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  background-color: #AA66AA;
+  border: 1px solid #000;
+}
+
+main .main-comment-box table th{
+}
+
+main .main-comment-box table td {
+  height: auto;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:  #000; 
+}

@@ -1,0 +1,43 @@
+<% i=1 %>
+<header>
+  <div class="header-item">
+    <h1>掲示BANG!</h1>
+    <ul>
+      <li><%= link_to 'ログアウト', :session, method: :delete, data: {confirm: "ログアウトしてもよろしいですか？"} %></li>
+      <li><%= link_to '掲示板一覧', board_index_path %></li>
+    </ul>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="create_comment_menu">
+      <%= form_for :form_comment do |form| %>
+        <div class="new_comment">
+          コメント:<%= form.text_field :comment, size: 100, maxlength: 60 %>
+          <%= form.submit "コメント送信" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="main-comment-box">
+      <table>
+        <tr>
+          <th style="text-align:left; width:50px;">番号</th>
+          <th style="text-align:left; width:100px">送信者</th>
+          <th style="text-align:left">コメント</th>
+          <th style="width:150px;">送信日時</th>
+        </tr>
+        <% @comments.each do |comment| %> 
+        <tr>
+          <td style="width:50px;"><%= i %></td>
+          <td style="width:100px"><%= comment.commentator %></td>
+          <td><%= comment.comment %></td>
+          <td style="text-align:center;width:150px;"><%= comment.created_at.strftime('%Y/%m/%d %H:%M:%S') %></td>
+        </tr>
+        <% i += 1 %>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</main>
+<footer>
+</footer>

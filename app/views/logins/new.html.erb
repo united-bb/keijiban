@@ -1,0 +1,25 @@
+<header>
+  <div class="header-item">
+    <h1>掲示BANG!</h1>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="login_main_box">
+      <div class="new_user_menu">
+        <h2>ユーザ登録</h2>
+        <%= form_for @user,:url => {:action => :create} do |form| %> 
+          <%= form.label :name, "ユーザ名" %><br>
+          <%= form.text_field :name, size: 50, maxlength: 20 %></br><br>          
+          <%= form.label :password, "パスワード" %><br>
+          <%= form.password_field :password, size: 50 %><br><br>
+          <%= form.label :password2, "パスワード(確認)" %><br>
+          <%= form.password_field :password_confirmation, size: 50 %><br><br>
+          <%= form.submit "ユーザ登録" %><br><br>
+          <%= link_to "ログイン",  login_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>

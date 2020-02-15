@@ -1,0 +1,39 @@
+// Place all the styles related to the login controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+main .login_main_box {
+  width: 1000px;
+  height: 500px;
+  margin: 5px 0 0 0;
+  padding: 50px 0 0 0;
+  background-color: #FF44FF;
+}
+
+main .login_main_box .login_menu {
+  width:  400px;
+  height: 300px;
+  margin: 0 0 0 600px;
+  padding: 25px 0 0 0;
+  background-color: #00AAAA;
+}
+
+main .login_main_box .login_menu h2{
+  margin: 0;
+  padding: 0;
+}
+
+main .login_main_box .new_user_menu {
+  width:  400px;
+  height: 350px;
+  margin: 10px 0 0 0;
+  padding: 10px 0 0 0;
+  background-color: #00AAAA;
+}
+
+main .login_main_box .new_user_menu h2 {
+  margin: 0;
+  padding:0;
+}
+

@@ -1,0 +1,47 @@
+<% genre=['マンガ','アニメ','ドラマ','映画','雑談','その他' ] %>
+<header>
+  <div class="header-item">
+    <h1>掲示BANG!</h1>
+    <ul>
+      <li><%= link_to 'ログアウト', :session, method: :delete, data: {confirm: "ログアウトしてもよろしいですか？"} %></li>
+      <li><%= link_to '掲示板一覧', board_index_path %></li>
+    </ul>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="create_board_menu">
+      <%= form_for :board do |form| %>
+        <div class="new_genre">
+          ジャンル:<%= form.select :genre, genre %>
+        </div>
+        <div class="new_boardname">
+          掲示板名:<%= form.text_field :board_name, size: 70, maxlength: 30 %>
+          <%= form.submit "掲示板新規作成" %>
+        </div>
+      <% end %>
+    </div>
+    <div class="main-box">
+      <table>
+        <tr>
+          <th style="text-align:left; width:100px;">ジャンル</th>
+          <th style="text-align:left;">作成者</th>
+          <th style="text-align:left">掲示板名</th>
+          <th style="width:150px;">作成日</th>
+          <th style="width:50px; text-align:left;">編集</th>
+        </tr>
+        <% @boards.each do |board| %> 
+        <tr>
+          <td style="width:100px;"><%= board.genre %></td>
+          <td style="width:120px;"><%= board.creator_name%></td>
+          <td><%= link_to board.board_name, "#{board.id}/comment" %></td>
+          <td style="text-align:center;width:150px;"><%= board.created_at.strftime('%Y/%m/%d') %></td>
+          <td><%= link_to '削除', "#{board.id}", method: :delete, data: {confirm: "掲示板#{board.board_name}を削除します。よろしいですか？" } if board.creator_name == session[:name] %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</main>
+<footer>
+</footer>
