@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   root 'logins#index'
   post 'board/index' => 'boards#create'
   delete 'board/:id' => 'boards#destroy'
-  get 'board/:id/show' => 'boards#show'
+  get 'board/:id/show' => 'boards#show', as: 'board_show'
+  get 'board/:id/edit' => 'boards#edit', as: 'board_edit'
+  post 'board/:id/edit' => 'boards#update'
 
   get 'board/:id/comment' => 'board_comments#index', as: 'board_comment' 
   post 'board/:id/comment' => 'board_comments#create'

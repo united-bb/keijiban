@@ -3,8 +3,8 @@
   <div class="header-item">
     <h1>掲示BANG!</h1>
     <ul>
-      <li><%= link_to 'ログアウト', logins_path %></li>
-      <li><%= link_to '掲示板一覧', boards_index_path %></li>
+      <li><%= link_to 'ログアウト', login_path %></li>
+      <li><%= link_to '掲示板一覧', board_index_path %></li>
     </ul>
   </div>
 </header>
@@ -14,7 +14,8 @@
       掲示板番号：<%= @board.id%><br>
       掲示板名　：<%= @board.board_name %><br>
       作成日時　：<%= @board.created_at %><br>
-      <%= link_to '削除', "#" %>
+      <%= link_to '編集', board_edit_path %>|<%= link_to '削除', "" %><br>
+      <%= link_to '掲示板一覧に戻る', board_index_path %>
     </div>
   </div>
 </main>
