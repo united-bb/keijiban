@@ -5,10 +5,12 @@ class SessionsController < ApplicationController
     if member&.authenticate(params[:password])
       session[:member_id] = member.id
       session[:name] = params[:name]
+
+      redirect_to board_index_path, notice:"ログインしました。"
     else
       flash.alert = "名前とパスワードが一致しません。"
+      render 'logins/index'
     end
-    redirect_to board_index_path, notice: "ログインしました。"
   end
 
   def destroy
