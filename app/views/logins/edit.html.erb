@@ -1,0 +1,25 @@
+<header>
+  <div class="header-item">
+    <h1>掲示BANG!</h1>
+  </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="login_main_box">
+      <div class="new_user_menu">
+        <h2>パスワード変更</h2>
+        <%= form_for @user,:url => {:action => :update} do |form| %> 
+          <%= form.label :current_password, "現在のパスワード" %><br>
+          <%= form.password_field :current_password, sizre: 50, maxlength: 50 %></br><br>          
+          <%= form.label :password, "新しいパスワード" %><br>
+          <%= form.password_field :password, size: 50 %><br><br>
+          <%= form.label :password2, "新しいパスワード(確認)" %><br>
+          <%= form.password_field :password_confirmation, size: 50 %><br><br>
+          <%= form.submit "パスワード変更" %><br><br>
+          <%= link_to "掲示板一覧に戻る",  board_index_path %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</main>

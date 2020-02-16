@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   get 'login/new' => 'logins#new'
   post 'login/new' => 'logins#create'
+  get 'login/edit' => 'logins#edit', as: 'login_edit'
+  patch 'login/edit' => 'logins#update'
+  post 'login/edit' => 'logins#update'
 
   get 'board/index' => 'boards#index'
   root 'logins#index'
