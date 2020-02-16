@@ -2,6 +2,7 @@ class BoardCommentsController < ApplicationController
   
   def index
     query = "SELECT row_id, id, comment, created_at FROM boardcomments WHERE board_id=? ORDER created_at;"
+    @board = Board.find(params[:id])
     @comments = Boardcomment.where(board_id: params[:id]).order(created_at: :asc)
     @comment = Boardcomment.new
   end

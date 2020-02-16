@@ -36,7 +36,7 @@
           <td style="width:120px;"><%= board.creator_name%></td>
           <td><%= link_to board.board_name, "#{board.id}/comment" %></td>
           <td style="text-align:center;width:150px;"><%= board.created_at.strftime('%Y/%m/%d') %></td>
-          <td><%= link_to '削除', "#{board.id}", method: :delete, data: {confirm: "掲示板#{board.board_name}を削除します。よろしいですか？" } if board.creator_name == session[:name] %>|<%= link_to '詳細', "#{board.id}/show" if board.creator_name == session[:name] %></td>
+          <td><%= link_to '詳細', "#{board.id}/show" if board.creator_name == session[:name] %>|<%= link_to '削除', "#{board.id}", method: :delete, data: {confirm: "掲示板#{board.board_name}を削除します。よろしいですか？" } if board.creator_name == session[:name] %></td>
         </tr>
         <% end %>
       </table>
