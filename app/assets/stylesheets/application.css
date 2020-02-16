@@ -15,7 +15,7 @@
  */
 
 body .notice{
-  width: 1000px;
-  margin: 5px auto 0 auto;
-
+  width: 995px;
+  margin: 0 auto 0 auto;
+  padding: 0;
 }

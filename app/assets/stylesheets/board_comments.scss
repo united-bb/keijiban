@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+main .main-comment-box .board_name{
+  width: 680px;
+  margin: 0 auto 0 auto;
+  padding: 0px;
+}
+
 main .main-comment-box table {
   width: 800px;
   height: auto;
@@ -21,3 +27,4 @@ main .main-comment-box table td {
   border-bottom-style: solid;
   border-bottom-color:  #000; 
 }
+
