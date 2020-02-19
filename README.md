@@ -1,24 +1,21 @@
-# README
+Free Board
+====
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Overview
+自分専用の掲示板アプリケーションを作成できる。
 
-Things you may want to cover:
+## Description
+このアプリケーションを起動することで、自分専用のアプリケーションを
+用意することができます。
 
-* Ruby version
+## Install
+```
+bin/rails db:create
 
-* System dependencies
+bin/rails s
+```
 
-* Configuration
+## Licence
 
-* Database creation
+This software is released under the MIT License, see LICENSE.txt.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
