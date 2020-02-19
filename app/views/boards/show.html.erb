@@ -1,7 +1,7 @@
 <% genre=['マンガ','アニメ','ドラマ','映画','雑談','その他' ] %>
 <header>
   <div class="header-item">
-    <h1>掲示BANG!</h1>
+    <%= image_tag "site_title_image.jpg", alt: "タイトル画像", id: 'title_image', class: "title_image" %>
     <ul>
       <li><%= link_to 'ログアウト', login_path %></li>
       <li><%= link_to '掲示板一覧', board_index_path %></li>

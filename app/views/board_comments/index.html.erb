@@ -1,7 +1,7 @@
 <% i=1 %>
 <header>
   <div class="header-item">
-    <h1>掲示BANG!</h1>
+    <%= image_tag "site_title_image.jpg", alt: "タイトル画像", id: 'title_image', class: "title_image" %>
     <ul>
       <li><%= link_to 'ログアウト', :session, method: :delete, data: {confirm: "ログアウトしてもよろしいですか？"} %></li>
       <li><%= link_to '掲示板一覧', board_index_path %></li>
