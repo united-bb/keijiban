@@ -8,15 +8,15 @@ main .login_main_box {
   height: 500px;
   margin: 5px 0 0 0;
   padding: 50px 0 0 0;
-  background-color: #FF44FF;
+  background-image: url(login_background.jpg);
 }
 
 main .login_main_box .login_menu {
   width:  400px;
   height: 300px;
-  margin: 0 0 0 600px;
-  padding: 25px 0 0 0;
-  background-color: #00AAAA;
+  margin: 0 0 0 580px;
+  padding: 70px 0 0 10px;
+  background-image: url(login_form_background.jpg);
 }
 
 main .login_main_box .login_menu h2{
@@ -26,10 +26,10 @@ main .login_main_box .login_menu h2{
 
 main .login_main_box .new_user_menu {
   width:  400px;
-  height: 350px;
-  margin: 10px 0 0 0;
-  padding: 10px 0 0 0;
-  background-color: #00AAAA;
+  height: 380px;
+  margin: 0 0 0 0;
+  padding: 70px 0 0 10px;
+  background-image: url(login_form_background.jpg);
 }
 
 main .login_main_box .new_user_menu h2 {
