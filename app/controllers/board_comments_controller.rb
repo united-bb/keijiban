@@ -8,14 +8,32 @@ class BoardCommentsController < ApplicationController
   end
 
   def create
-     @comment = Boardcomment.new(params[:form_comment])
-     @comment.board_id = params[:id]
-     @comment.commentator = session[:name]
+    @comment = Boardcomment.new(params[:form_comment])
+    @comment.board_id = params[:id]
+    @comment.commentator = session[:name]
 
-     if @comment.save
-        redirect_to board_comment_url, notice: "コメントを送信しました。"
-     else
-       render "board_comment"
-     end
+    @comments_count = Boardcomment.where(board_id: params[:id] ).count
+    
+
+    # 登録済みコメントが1000コメント以上の場合
+    begin
+      if @comments_count >= 1000
+        raise "コメントが1000コメントを超えました"
+      end
+    rescue  Exception
+      flash.alert = "コメントが1000コメントを超えました。新しい掲示板を作成してください。
+      "
+      redirect_to board_comment_url
+      return
+    end
+    
+    # 登録済みコメントが1000コメント未満の場合
+    if @comment.save
+      redirect_to board_comment_url, notice: "コメントを送信しました。"
+      return
+    else
+      render "board_comment"
+      return
+    end
   end
 end

@@ -18,6 +18,13 @@
         </div>
       <% end %>
     </div>
+    <div class="alert-area">
+      <% if flash.alert %>
+        <p class="alert">
+          <%= flash.alert %>
+        </p>
+      <% end %>
+    </div>
     <div class="main-comment-box">
       <div class="board_name">
         <h2>掲示板名：<%= @board.board_name %></h2>
