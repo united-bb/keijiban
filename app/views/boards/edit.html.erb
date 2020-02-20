@@ -13,7 +13,7 @@
       <%= form_for :board_form do |form|%>
         掲示板番号：<%= @board.id%><br>
         掲示板名　：<%= form.text_field :board_name, size:60, maxlength:60 %><br>
-        作成日時　：<%= @board.created_at %><br>
+        作成日時　：<%= @board.created_at.strftime("%Y-%m-%d %H:%M") %><br>
         <%= form.submit "変更する" %>
       <% end %>
       <%= link_to '掲示板詳細に戻る', board_show_path %>
