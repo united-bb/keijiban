@@ -10,11 +10,13 @@
       <div class="login_menu">
         <h2>ログイン</h2>
         <% if flash.alert %>
-          <p class="alert">
-            <%= flash.alert %>
-          </p>
+          <div class="alert_area">
+            <p class="alert">
+              <%= flash.alert %>
+            </p>
+          </div>
         <% end %>
-        <%= form_tag :session, id: "login_form" do %>
+        <%= form_tag :login, id: "login_form" do %>
           <label>ユーザー名:</label><br>
           <input type="text" name="name" size="50"></br><br>
           <label>パスワード:</label><br>
