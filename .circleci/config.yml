@@ -9,7 +9,8 @@ jobs:
     executor: default
     steps:
       - checkout
-      - run:
-          name: rsepc_test
-          command: rspec
+      - run: bundle install
+      - run: bin/rails db:create
+      - run: bin/rails db:migrate
+      - run: rspec
 
